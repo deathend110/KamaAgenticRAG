@@ -14,7 +14,7 @@ WORKDIR /app
 
 # 只复制锁文件装依赖：源码变化不会让这一层失效。
 COPY backend/pyproject.toml backend/uv.lock /app/backend/
-RUN uv sync --project /app/backend --frozen --no-install-project
+RUN UV_HTTP_TIMEOUT=300 uv sync --project /app/backend --frozen --no-install-project
 
 # 源码由 compose 挂载；这里只声明它在包路径上。
 ENV PYTHONPATH=/app/backend/src:/app
