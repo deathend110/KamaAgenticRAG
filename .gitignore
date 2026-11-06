@@ -18,3 +18,9 @@ dataset/data/generated/
 
 # 数据集不随仓库分发：解包 flowpay-dataset-v1.tar.gz 后用 FLOWPAY_DATASET_ROOT 指向它。
 /dataset/
+
+# 数据集文件路径
+flowpay-dataset
+
+# 缓存文件路径
+__MACOSX
